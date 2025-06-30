@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+    <script type="text/babel">
+        function EmpInfo(){
+            const[emp,setEmp]=React.useState({
+                name:'Sharanya',
+                address:'Banglore',
+                company:'IBM'
+            });
+            const[toggle,setToggle]=React.useState(true);
+            const handleChange=()=>{
+                if(toggle){
+                    setEmp({
+                        name:'Sharanya',
+                        address:'Banglore',
+                        company:'IBM'
+                    });
+                }
+                else{
+                    setEmp({
+                        name:'Yash',
+                        address:'Mumbai',
+                        company:'Microsoft'
+                    });
+                }
+                setToggle(!toggle);
+            }
+            return(
+                <div>
+                    <h1>Toggle the button</h1>
+                    <p><b>Name:</b>{emp.name}</p>
+                    <p><b>Address:</b>{emp.address}</p>
+                    <p><b>Company:</b>{emp.company}</p>
+                    <button onClick={handleChange}>Toggle</button>
+                </div>
+            )
+        }
+        ReactDOM.render(<EmpInfo />,document.getElementById('root'));
+    </script>
+</body>
+</html>

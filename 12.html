@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacks and Queues</title>
+</head>
+<body>
+    <h1>Stack</h1>
+    <input id="stackip" placeholder="Enter elements" required>
+    <button id="push">Push</button>
+    <button id="pop">Pop</button>
+    <p id="stackop"></p>
+
+    <h1>Queue</h1>
+    <input id="queueip" placeholder="Enter elements" required>
+    <button id="enqueue">Push</button>
+    <button id="dequeue">Pop</button>
+    <p id="queueop"></p>
+    <script>
+        const stack=[],queue =[];
+
+        const update=()=>{
+            stackop.textContent="Stack : [" +stack.join(", ") +"]";
+            queueop.textContent="Queue : [" +queue.join(", ") +"]";
+        };
+
+        push.onclick=()=>{
+            const val=stackip.value.trim();
+            if(val) stack.push(val);
+            stackip.value=" ";
+            update();
+
+        }
+        pop.onclick=()=>{
+            stack.pop();
+            update();
+        }
+
+        enqueue.onclick=()=>{
+            const val=queueip.value.trim();
+            if(val) queue.push(val);
+            queueip.value=" ";
+            update();
+
+        }
+        dequeue.onclick=()=>{
+            queue.shift();
+            update();
+        }
+
+    </script>
+</body>
+</html>

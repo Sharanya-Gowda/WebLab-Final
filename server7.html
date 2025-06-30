@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollments</title>
+</head>
+<body>
+    <h1>Enter Student details</h1>
+    <form action="/insert" method="post">
+        <input name="id" type="number" placeholder="Enter id" required>
+        <input name="name" type="text" placeholder="Enter name" required>
+        <input name="course" type="text" placeholder="Course Name" required>
+        <input name="duration" type="text" placeholder="Enter duration" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Status Updating</h2>
+    <form action="/update" method="post">
+        <input name="id" type="number" placeholder="Enter id" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>See the status</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

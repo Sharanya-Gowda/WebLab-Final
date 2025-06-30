@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Bad</title>
+</head>
+<body>
+    <h2>Not Bad</h2>
+    <form id="form">
+        <input id="noun" type="text" placeholder="Text" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Output</h2>
+    <p id="output"></p>
+    <script>
+        document.getElementById('form').addEventListener("submit",function(e){
+            e.preventDefault();
+
+            const ip=document.getElementById('noun').value.trim();
+            const op=document.getElementById('output');
+
+            function badsentence(sen){
+                let notindex=sen.indexOf("not");
+                let badindex=sen.indexOf("bad");
+                if(notindex!==-1 && badindex!==-1 && badindex>notindex){
+                    return sen.slice(0,notindex) + "good" + sen.slice(badindex+3);
+                }
+                return sen;
+            }
+            op.innerText=badsentence(ip);
+        });
+    </script>
+</body>
+</html>

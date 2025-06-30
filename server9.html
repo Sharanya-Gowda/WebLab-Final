@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <form action="/insert" method="post">
+        <input name="name" type="text" placeholder="Enter name" required>
+        <input name="branch" type="text" placeholder="Enter Branch" required>
+        <input name="sem" type="number" placeholder="Enter sem" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Students in cse and 6th sem</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

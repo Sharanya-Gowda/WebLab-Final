@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <h2>Enter Product Details</h2>
+    <form action="/insert" method="post">
+        <input name="id" type="number" placeholder="Enter id" required>
+        <input name="name" type="text" placeholder="Enter name" required>
+        <input name="price" type="number" placeholder="Enter price" required>
+        <input name="discount" type="number" placeholder="Enter discount" required>
+        <input name="stock" type="number" placeholder="Enter stock" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Get products below 1000</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

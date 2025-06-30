@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluralizer</title>
+</head>
+<body>
+    <h2>Pluralizer</h2>
+    <form id="form">
+        <input id="noun" type="text" placeholder="Enter Noun" required>
+        <input id="number" type="number" placeholder="Enter Number" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Output</h2>
+    <p id="output"></p>
+    <script>
+        document.getElementById('form').addEventListener("submit",function(e){
+            e.preventDefault();
+
+            const ip=document.getElementById('noun').value.trim();
+            const number=parseInt(document.getElementById('number').value.trim());
+            const op=document.getElementById('output');
+
+            const irregular={
+                'goose':'geese',
+                'man':'men',
+                'sheep':'sheep',
+                'child':'children',
+                'woman':'women',
+                'mouse':'mice',
+                'cat':'cats'
+            };
+            let plural;
+            if(number===1){
+                plural=ip;
+            }
+            else if(irregular[ip]){
+                plural=irregular[ip];
+            }
+            else if(ip.endsWith("y") || !"aeiou".includes(ip.at(-2))){
+                plural=ip.slice(0,-1) + "ies";
+            }
+            else if(ip.endsWith("s") || ip.endsWith("ch") || ip.endsWith("sh") || ip.endsWith("x") || ip.endsWith("z") ){
+                plural= ip +"es";
+            }
+            else{
+                plural=ip+"s";
+            }
+            op.innerText=`${number} ${plural}`;
+        });
+    </script>
+</body>
+</html>

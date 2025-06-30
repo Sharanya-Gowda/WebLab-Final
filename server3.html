@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h2>Enter Emp Details</h2>
+    <form action="/insert" method="post">
+        <input name="name" type="text" placeholder="Name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="phone" type="text" placeholder="Phone No" required>
+        <input name="hire" type="date" placeholder="Date" required>
+        <input name="title" type="text" placeholder="Title" required>
+        <input name="salary" type="number" placeholder="Salary" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Displaying salary gt than 50000</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

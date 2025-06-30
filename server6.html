@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Data</title>
+</head>
+<body>
+    <h2>Enter details</h2>
+    <form action="/insert" method="post">
+        <input name="id" type="number" placeholder="Enter ID" required>
+        <input name="name" type="text" placeholder="Enter Name" required>
+        <input name="location" type="text" placeholder="Enter location" required>
+        <input name="totalbeds" type="number" placeholder="Enter TotalBeds" required>
+        <input name="occ" type="number" placeholder="Enter Occ" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Display Hospitals where Availabale beds are present</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

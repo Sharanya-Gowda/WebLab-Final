@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month convertor</title>
+</head>
+<body>
+    <h1>Month Convertor</h1>
+    <form id="form">
+        <input id="monthnum" type="text" placeholder="Enter number" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Output</h2>
+    <p id="output"></p>
+    <script>
+        document.getElementById('form').addEventListener("submit",function(e){
+            e.preventDefault();
+
+            const ip=parseInt(document.getElementById('monthnum').value.trim());
+            const op=document.getElementById('output');
+
+            const months=['Jan','Feb','March','April','May','June','July','August','Sep','Oct','Nov','Dec'];
+            if(isNaN(ip)|| ip<0 || ip>12){
+                op.innerText="Bad Number"
+            }
+            else{
+                op.innerText=months[ip-1];
+            }
+        })
+    </script>
+</body>
+</html>

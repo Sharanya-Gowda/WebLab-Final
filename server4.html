@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship</title>
+</head>
+<body>
+    <h2>Inserted Data</h2>
+    <form action="/insert" method="post">
+        <input name="id" type="number" placeholder="Id" required>
+        <input name="name" type="text" placeholder="Name" required>
+        <input name="company" type="text" placeholder="Company" required>
+        <input name="duration" type="text" placeholder="Duration" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Displaying Infosys</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Updating </h2>
+    <form action="/update" method="post">
+        <input name="id" type="number" placeholder="Id" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

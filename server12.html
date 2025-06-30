@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <form action="/insert" method="post">
+        <input name="id" type="text" placeholder="Enter ID">
+        <input name="name" type="text" placeholder="Enter name" required>
+        <input name="subject" type="text" placeholder="Enter Course" required>
+        <input name="marks" type="number" placeholder="Enter Marks" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Students who are not eligible</h2>
+    <form action="/see" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

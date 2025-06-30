@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student details</title>
+</head>
+<body>
+    <h2>Enter Student Details</h2>
+    <form id="form">
+        <input id="usn" type="text" placeholder="usn" required>
+        <input id="code" type="text" placeholder="code" required>
+        <input id="name" type="text" placeholder="name" required>
+        <input id="cie" type="number" placeholder="cie" required>
+        <input id="see" type="number" placeholder="see" required>
+        <button type="submit">Submit</button>
+        <h2>Output</h2>
+        <p id="output"></p>
+        <script>
+            document.getElementById('form').addEventListener("submit",function(e){
+                e.preventDefault();
+
+                const usn=document.getElementById('usn').value.trim();
+                const code=document.getElementById('code').value.trim();
+                const name=document.getElementById('name').value.trim();
+                const cie=parseInt(document.getElementById('cie').value.trim());
+                const see=parseInt(document.getElementById('see').value.trim());
+                const op=document.getElementById('output');
+
+                function student(usn,code,name,cie,see){
+                    return{
+                        getDetails:function(){
+                            const total=cie+see;
+                            return `USN:${usn}, Total_Marks:${total}`;
+                        }
+                    };
+                }
+                const ans=student(usn,code,name,cie,see);
+                op.innerText=ans.getDetails();
+            })
+        </script>
+    </form>
+</body>
+</html>

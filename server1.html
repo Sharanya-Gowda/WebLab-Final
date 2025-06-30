@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain management</title>
+</head>
+<body>
+    <h2>Enter your complaint</h2>
+    <form action="/insert" method="post">
+        <input name="id" type="number" placeholder="Enter ID">
+        <input name="uname" type="text" placeholder="Name">
+        <input name="complaint" type="text" placeholder="Complaint">
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Rsolving the issue</h2>
+    <form action="/resolve" method="post">
+        <input name="uname" type="text" placeholder="Name">
+        <button name="status" value="in progress" type="submit">In Progress</button>
+        <button name="status" value="resolved" type="submit">Resolved</button>
+    </form>
+    <h2>View Pending Complaints</h2>
+    <form action="/viewcomp" method="get">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
